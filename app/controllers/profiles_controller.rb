@@ -1,12 +1,12 @@
 class ProfilesController < ApplicationController
     
-    # Get to /users/:users_id/profile/new
+    # GET to /users/:users_id/profile/new
     def new
         # Render blank profile details form
         @profile = Profile.new
     end
     
-    # Post to /users/:users_id/profile
+    # POST to /users/:users_id/profile
     def create
         # Ensure that we have the user who is filling out form
         @user = User.find( params[:user_id] )
